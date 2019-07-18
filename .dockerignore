@@ -1,0 +1,6 @@
+.DS_Store
+/.idea
+.venv
+/caixabreak/local_settings.py
+*.sqlite3
+static_temp
