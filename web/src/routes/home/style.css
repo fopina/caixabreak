@@ -1,0 +1,23 @@
+.home {
+	padding: 20px;
+	min-height: 100%;
+	width: 100%;
+}
+
+.cardHeader {
+  padding: 16px;
+}
+
+.fab {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+}
+
+.debit {
+  color: red;
+}
+
+.credit {
+  color: green;
+}

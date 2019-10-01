@@ -1,0 +1,11 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  break${BUILD_ENV}:
+    lang: golang-http
+    handler: ./break
+    image: fopina/functions:break${BUILD_ENV}
+    labels:
+      com.openfaas.scale.zero: ${ZEROSCALE:-false}
