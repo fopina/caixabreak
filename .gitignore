@@ -1,6 +1,5 @@
 /.idea
-*.pyc
-/caixabreak/local_settings.py
-*.sqlite3
-static_temp
 .DS_Store
+template
+build
+.vscode

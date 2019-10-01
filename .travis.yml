@@ -1,0 +1,53 @@
+language: minimal
+
+branches:
+  only:
+    - master
+    - dev
+
+jobs:
+  include:
+    - &buildit
+      name: build function
+      if: branch = master
+      before_install:
+      - |
+          git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qE '(break.yml$)|(^(break|cli))/' || {
+            echo "Function was not updated, stopping build process."
+            exit
+          }
+      script:
+      - curl -sSL https://cli.openfaas.com | sudo sh
+      - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+      - faas-cli login -u ${FAAS_USER} -p ${FAAS_PASS} -g ${FAAS_GATEWAY}
+      - make
+    - <<: *buildit
+      if: branch != master
+      name: build function DEV
+      env:
+        - BUILD_ENV="-dev"
+        - ZEROSCALE=true
+    - name: build page
+      if: branch = master
+      language: node_js
+      node_js:
+        - "stable"
+      before_install:
+      - |
+          git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qE '(^web)/' || {
+            echo "Page was not updated, stopping build process."
+            exit
+          }
+      cache:
+        directories:
+        - web/node_modules
+      script:
+        - cd web
+        - npm install
+        - npm run-script build
+        #- echo dedofeup.skmobi.com > build/CNAME
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        local_dir: web/build

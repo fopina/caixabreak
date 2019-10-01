@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-pt"><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Cache-Control" content="No-Cache" />
+        <meta http-equiv="Expires" content="Mon, 22 Jul 2002 11:12:01 GMT" />
+        <meta http-equiv="Pragma" content="No-Cache" />
+
+        <title>Portal Pré-Pagos
+
+        </title>
+        </head>
+        <body class="bodyCSS">
+        <div id="wrap">
+    <div id="loadingModalPanel">
+        <div class="modal_background">
+            <span id="loadingModalPanelMsg" class="modal_labelMsg">Aguarde, por favor
+            </span>
+            <span><img src="https://static.cgd.pt/staticCMS/ppp/global/img/spinner_component.gif" /></span>
+        </div>
+     </div>
+     <div id="modal_shadow"></div><div class="header"><div class="subheader1"><div class="picture"><a href="/portalprepagos/private/home.seam"><img src="https://static.cgd.pt/staticCMS/ppp/global/img/caixa_geral_de_depositos.png" alt="Logo Portal Pré-Pagos"></img></a></div></div></div><div class="logosprint"><div class="logocgdprint"><img src="https://static.cgd.pt/staticCMS/ppp/global/img/cgd_print.gif"></img></div><div class="logoprint"><img src="https://static.cgd.pt/staticCMS/ppp/global/img/caixa_geral_de_depositos.png"></img></div></div>
+
+
+
+
+    <div class="welcomearea"><div class="wa_menuFloatLeft"><ul class="wa_firstnav"></ul></div>
+            <div class="wa_menuFloatRight">
+                <ul class="wa_scdnav">
+
+                    <li><a href="/portalprepagos/private/logout.seam?actionMethod=private%2FsaldoMovimentos.xhtml%3Aidentity.logout" id="menuLogoutId" type="submit">Sair</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+            <div class="mainbody">
+                <div class="leftmenu2">
+
+            <ul id="menu">
+                        <li>
+                                <a id="menuLink101042773" href="#" class="lvl1_wkids_active">Cartões pré-pagos</a>
+                                <ul style="display: block; margin: 0px;">
+                                    <div class="lvl2Border">
+                                            <li>
+                                                    <a href="/portalprepagos/private/saldoMovimentos.seam" class="lvl2_active" onclick="openLoading();">Saldos e Movimentos</a>
+                                            </li>
+                                    </div>
+                                </ul>
+                        </li>
+                        <li>
+                                <a id="menuLink101042776" href="#" class="lvl1_wkids">Serviço</a>
+                                <ul style="display: none; margin: 0px;">
+                                    <div class="lvl2Border">
+                                            <li>
+                                                    <a href="/portalprepagos/private/cancelarAcesso.seam" class="lvl2" onclick="openLoading();">Cancelar acesso</a>
+                                            </li>
+                                    </div>
+                                </ul>
+                        </li>
+            </ul>
+
+
+
+                </div>
+                <div class="innerbody">
+        <div class="main2">
+
+
+
+
+            <div class="breadcrumb">
+                <div class="breadcrumbtitle"><label>
+Consultar Saldos e Movimentos</label></div>
+
+    <script language="javascript">
+        function activateBreadCrumbActionLink(value)
+        {
+            var link = document.getElementById("consultaMovimentosCartoesPrePagos:" + value);
+
+            if(link != null)
+            {
+                link.onclick();
+            }
+        }
+    </script>
+
+
+
+
+    <ul id="breadcrumbbuttons">
+    </ul>
+            </div>
+            <div class="breadcrumbbar"></div><script type="text/javascript">
+//<![CDATA[
+app.onReady(function() {customValidationArray = [];localErrors = [];aTestObjs = [];previousFullValidationErrors = [];});//]]>
+</script>
+
+<form id="consultaMovimentosCartoesPrePagos" name="consultaMovimentosCartoesPrePagos" method="post" action="/portalprepagos/private/saldoMovimentos.seam" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="consultaMovimentosCartoesPrePagos" value="consultaMovimentosCartoesPrePagos" />
+<div class="messages_header_master" style="display:none;"><div class="messages_header_background"><div class="messages_pic_list"><div class="messages_pic_png"><img id="consultaMovimentosCartoesPrePagos:errorMessagesimage" class="sprite error" src="https://static.cgd.pt/staticCMS/ppp/global/img/spacer.gif" /></div><div class="messages_pic_label" id="consultaMovimentosCartoesPrePagos:errorMessages" ></div></div></div></div>
+
+
+
+    <input type="hidden" id="download_token_value_id" /><input id="consultaMovimentosCartoesPrePagos:ignoreFieldsComp" type="hidden" name="consultaMovimentosCartoesPrePagos:ignoreFieldsComp" /><div id="j_idt107_block" class="titleDivA1 title_text2" style="null" ><label>
+Seleccione o cartão/conta cartão</label></div>
+
+            <div class="linha"><div id="consultaMovimentosCartoesPrePagos:selectedCard_block" class="componentsDivBox"><label id="consultaMovimentosCartoesPrePagos:selectedCard_label" for="consultaMovimentosCartoesPrePagos:selectedCard" class="componentsLabel">
+Cartão/conta cartão</label><select id="consultaMovimentosCartoesPrePagos:selectedCard" name="consultaMovimentosCartoesPrePagos:selectedCard" class="componentsComboBox" size="1" onchange="app.post(this);window.focus();"> <option value="10122234853" selected="selected">10122234853 - Cartão Caixa Break</option>
+</select><span id="consultaMovimentosCartoesPrePagos:selectedCard_error" class="ErrorWithImage" style="display:none"><img id="selectedCard_image" src="https://static.cgd.pt/staticCMS/ppp/global/img/spacer.gif" class="sprite errorfield" /></span></div>
+            </div>
+
+            <div class="linha">
+                <div class="linha col3 mgtop">
+
+                    <div class="tab1_saldos">
+                        <div class="tab2_saldos">
+                            <div class="saldos">
+                                <p class="ref">Saldo disponível
+                                </p>
+                                <p class="valor"><label>121,12</label><label class="marginBetween">EUR</label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><div id="j_idt116_block" class="titleDivA1 title_text2" style="null" ><label>
+Consulte os movimentos</label></div>
+
+
+
+            <div class="linha"><div id="consultaMovimentosCartoesPrePagos:extractDates_block" class="componentsDivBox"><label id="consultaMovimentosCartoesPrePagos:extractDates_label" for="consultaMovimentosCartoesPrePagos:extractDates" class="componentsLabel">
+Extracto</label><select id="consultaMovimentosCartoesPrePagos:extractDates" name="consultaMovimentosCartoesPrePagos:extractDates" class="componentsComboBox" size="1" onchange="app.post(this);window.focus();">    <option value="UNBLD" selected="selected">Corrente</option>
+    <option value="07/19">07-2019</option>
+    <option value="06/19">06-2019</option>
+    <option value="05/19">05-2019</option>
+    <option value="04/19">04-2019</option>
+    <option value="03/19">03-2019</option>
+    <option value="02/19">02-2019</option>
+    <option value="01/19">01-2019</option>
+    <option value="12/18">12-2018</option>
+    <option value="11/18">11-2018</option>
+    <option value="10/18">10-2018</option>
+    <option value="09/18">09-2018</option>
+</select><span id="consultaMovimentosCartoesPrePagos:extractDates_error" class="ErrorWithImage" style="display:none"><img id="extractDates_image" src="https://static.cgd.pt/staticCMS/ppp/global/img/spacer.gif" class="sprite errorfield" /></span></div>
+            </div>
+            <div class="linha mgtop">
+                <table class="bordertable clear" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr class="headertable">
+                        <td class="headertableTxt col_fst">Data
+                        </td>
+                        <td class="headertableTxt col_med">Data valor
+                        </td>
+                        <td class="headertableTxt col_med">Descrição
+                        </td>
+                        <td class="headertableTxt tbl_col_saldo col_med alignrighttext">Débito
+                        </td>
+                        <td class="headertableTxt  tbl_col_saldo alignrighttext col_last">Crédito
+                        </td>
+                    </tr>
+                            <tr onmouseover="JavaScript:this.className='row_Over'" onmouseout="JavaScript:this.className='row_branco';" class="row_branco">
+                                <td width="15%" class="texttable col_fst">02-08-2019</td>
+                                <td width="15%" class="texttable col_med">01-08-2019</td>
+                                <td class="texttable col_med">CASA DO PAO    4300-025 PORTO</td>
+                                <td class="texttable col_med alignrighttext">5,00</td>
+                                <td class="texttable  alignrighttext col_last"> </td>
+
+                            </tr>
+                            <tr onmouseover="JavaScript:this.className='row_Over'" onmouseout="JavaScript:this.className='row_cinza';" class="row_cinza">
+                                <td width="15%" class="texttable col_fst">05-08-2019</td>
+                                <td width="15%" class="texttable col_med">02-08-2019</td>
+                                <td class="texttable col_med">CASA DO BIFE   4000-334 PORTO</td>
+                                <td class="texttable col_med alignrighttext">12,60</td>
+                                <td class="texttable  alignrighttext col_last"> </td>
+
+                            </tr>
+                            <tr onmouseover="JavaScript:this.className='row_Over'" onmouseout="JavaScript:this.className='row_branco';" class="row_branco">
+                                <td width="15%" class="texttable col_fst">05-08-2019</td>
+                                <td width="15%" class="texttable col_med">04-08-2019</td>
+                                <td class="texttable col_med">PASTELARIA BOLA BERLIM SAO PEDRO DO SUL</td>
+                                <td class="texttable col_med alignrighttext">9,45</td>
+                                <td class="texttable  alignrighttext col_last"> </td>
+
+                            </tr>
+                            <tr onmouseover="JavaScript:this.className='row_Over'" onmouseout="JavaScript:this.className='row_cinza';" class="row_cinza">
+                                <td width="15%" class="texttable col_fst">13-08-2019</td>
+                                <td width="15%" class="texttable col_med">12-08-2019</td>
+                                <td class="texttable col_med">CASA DO BIFE      4000-334 PORTO</td>
+                                <td class="texttable col_med alignrighttext">7,80</td>
+                                <td class="texttable  alignrighttext col_last"> </td>
+
+                            </tr>
+                            <tr onmouseover="JavaScript:this.className='row_Over'" onmouseout="JavaScript:this.className='row_branco';" class="row_branco">
+                                <td width="15%" class="texttable col_fst">16-08-2019</td>
+                                <td width="15%" class="texttable col_med">14-08-2019</td>
+                                <td class="texttable col_med">FRANCESINHA  PORTO</td>
+                                <td class="texttable col_med alignrighttext">11,30</td>
+                                <td class="texttable  alignrighttext col_last"> </td>
+
+                            </tr>
+                            <tr onmouseover="JavaScript:this.className='row_Over'" onmouseout="JavaScript:this.className='row_branco';" class="row_branco">
+                                <td width="15%" class="texttable col_fst">21-07-2019</td>
+                                <td width="15%" class="texttable col_med">21-07-2019</td>
+                                <td class="texttable col_med">CARREGAMENTO AUTOMATICO PRE-PAGO</td>
+                                <td class="texttable col_med alignrighttext"> </td>
+                                <td class="texttable  alignrighttext col_last">93,23</td>
+
+                            </tr>
+                    <tr class="footertable_sempag">
+                        <td colspan="5"></td>
+                    </tr>
+                </table>
+                <div class="mgtop">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" class="bordertable">
+                        <tbody>
+                            <tr class="footertable_separado">
+
+                                <td class="subfootertable alignrighttext"></td>
+                                <td class="subfootertable alignrighttext"></td>
+                                <td class="subfootertable alignrighttext"><strong>Totais
+                                </strong></td>
+                                <td class="subfootertable tbl_col_saldo alignrighttext"><strong>46,15
+                                </strong></td>
+
+                                <td class="subfootertable tbl_col_saldo alignrighttext"><strong>0,00
+                                </strong></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="moeda"><label>
+valores em</label><label>
+EUR</label>
+                </div>
+            </div>
+
+    <div class="mgtop linha freeText"></div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="x:y" autocomplete="off" />
+</form>
+        </div>
+                </div>
+            </div>
+        </div>
+    </body> 
+</html>
