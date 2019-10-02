@@ -45,7 +45,7 @@ jobs:
         - cd web
         - npm install
         - npm run-script build
-        #- echo dedofeup.skmobi.com > build/CNAME
+        - echo break.skmobi.com > build/CNAME
       deploy:
         provider: pages
         skip_cleanup: true
