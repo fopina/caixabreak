@@ -1,14 +1,14 @@
 :root {
-  --mdc-theme-primary: black;
-  --mdc-theme-secondary: #828080;
+  --mdc-theme-primary: #00264c;
+  --mdc-theme-secondary: #00264c;
 }
 
 .mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic {
-  color: black !important;
+  color: #00264c !important;
 }
 
 .mdc-drawer .mdc-list-item--activated {
-  color: black !important;
+  color: #00264c !important;
 }
 
 html, body {
