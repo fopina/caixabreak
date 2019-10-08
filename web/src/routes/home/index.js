@@ -2,7 +2,6 @@ import { Component } from 'preact';
 import List from 'preact-material-components/List';
 import Fab from 'preact-material-components/Fab';
 import LinearProgress from 'preact-material-components/LinearProgress';
-import ListItemMetaText from '../../components/material-listmetatext'
 import 'preact-material-components/List/style.css';
 import 'preact-material-components/Fab/style.css';
 import 'preact-material-components/LinearProgress/style.css';
@@ -58,7 +57,7 @@ export default class Home extends Component {
 									<List.PrimaryText>{item.Description}</List.PrimaryText>	
 									<List.SecondaryText>{item.Date}</List.SecondaryText>	
 								</List.TextContainer>
-								<ListItemMetaText class={
+								<List.ItemMetaText class={
 									item.CreditAmount > 0 
 									? `${style.credit}` 
 									: `${style.debit}`
@@ -68,7 +67,7 @@ export default class Home extends Component {
 									? item.CreditAmount 
 									: item.DebitAmount
 								}
-								</ListItemMetaText>
+								</List.ItemMetaText>
 							</List.Item>
 					)}
 					</List>
