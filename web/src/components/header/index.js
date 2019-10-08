@@ -66,13 +66,13 @@ export default class Header extends Component {
 						</TopAppBar.Section>
 					</TopAppBar.Row>
 				</TopAppBar>
-				<Drawer modal ref={this.drawerRef} tabindex={0}>
+				<Drawer modal ref={this.drawerRef}>
 					<Drawer.DrawerContent>
-						<Drawer.DrawerItem selected={props.selectedRoute === '/'} onClick={this.goHome}>
+						<Drawer.DrawerItem tabindex={0} selected={props.selectedRoute === '/'} onClick={this.goHome}>
 							<List.ItemGraphic>home</List.ItemGraphic>
 							Home
 						</Drawer.DrawerItem>
-						<Drawer.DrawerItem selected={props.selectedRoute === '/about'} onClick={this.goToAbout}>
+						<Drawer.DrawerItem tabindex={0} selected={props.selectedRoute === '/about'} onClick={this.goToAbout}>
 							<List.ItemGraphic>info</List.ItemGraphic>
 							About
 						</Drawer.DrawerItem>
