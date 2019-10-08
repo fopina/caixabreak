@@ -10,9 +10,6 @@ import { isLoggedIn, setServerEndpoint } from '../utils/BreakService';
 
 export default class App extends Component {
 	handleRoute = e => {
-		if (e.current.attributes && e.current.attributes.server) {
-			setServerEndpoint(e.current.attributes.server)
-		}
 		const isAuthed = isLoggedIn();
 		if ((e.current.attributes?e.current.attributes.auth:false) && !isAuthed) {
 			route("/login/", true)

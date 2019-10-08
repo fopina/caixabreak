@@ -44,7 +44,8 @@ jobs:
       script:
         - cd web
         - npm install
-        - npm run-script build
+        - echo ${FAAS_GATEWAY}/function/break > .env
+        - npm run -s build
         - echo break.skmobi.com > build/CNAME
       deploy:
         provider: pages
