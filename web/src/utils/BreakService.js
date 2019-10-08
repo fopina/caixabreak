@@ -1,10 +1,6 @@
 import axios from 'axios';
 
-const SERVER_URL = {
-    '_': 'https://func.skmobi.com/function/break',
-    'dev': 'https://func.skmobi.com/function/break-dev',
-    'local': 'http://localhost:9999',
-}
+const SERVER_URL = process.env.API_URL
 
 var days = [];
 
@@ -33,12 +29,12 @@ export function isLoggedIn() {
 }
 
 export function refreshWithLogin(username, password) {
-    return axios.post(getServerEndpoint(), {'username': username, 'password': password})
+    return axios.post(SERVER_URL, {'username': username, 'password': password})
                 .then(response => response.data)
 }
 
 export function refreshWithToken(token) {
-    return axios.post(getServerEndpoint(), {'token': token})
+    return axios.post(SERVER_URL, {'token': token})
                 .then(response => response.data)
 }
 
@@ -55,18 +51,4 @@ export function getData() {
         data = JSON.parse(localStorage.getItem("data"))
     }
     return data || {'History': []}
-}
-
-function getServerEndpoint() {
-    var c = '_'
-    if (typeof window !== "undefined") {
-        c = localStorage.getItem("apiServer")
-	}
-    return SERVER_URL[c] || SERVER_URL['_']
-}
-
-export function setServerEndpoint(server) {
-    if (typeof window !== "undefined") {
-    	localStorage.setItem("apiServer", server)
-    }
 }

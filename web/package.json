@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "dotenv-safe": "^8.1.0",
     "linkstate": "^1.1.1",
     "preact": "^8.5.2",
     "preact-compat": "^3.17.0",
