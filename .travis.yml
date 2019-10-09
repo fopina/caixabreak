@@ -44,7 +44,7 @@ jobs:
       script:
         - cd web
         - npm install
-        - echo PREACT_APP_API_URL=${FAAS_GATEWAY}/function/break > .env
+        - echo PREACT_APP_API_URL=${FAAS_GATEWAY}function/break > .env
         - npm run build
         - echo break.skmobi.com > build/CNAME
       deploy:
