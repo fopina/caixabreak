@@ -38,18 +38,18 @@ export function isLoggedIn() {
     return getToken()
 }
 
-export async function refreshWithLogin(username, password) {
-    const response = await axios.post(SERVER_URL, { 'username': username, 'password': password });
-    return response.data;
+export function refreshWithLogin(username, password) {
+    return axios.post(SERVER_URL, {'username': username, 'password': password})
+                .then(response => response.data)
 }
 
-export async function refreshWithSavedLogin() {
+export function refreshWithSavedLogin() {
     return refreshWithLogin(localStorage.getItem("u"), localStorage.getItem("p"))
 }
 
-export async function refreshWithToken() {
-    const response = await axios.post(SERVER_URL, { 'token': getToken() });
-    return response.data;
+export function refreshWithToken() {
+    return axios.post(SERVER_URL, { 'token': getToken() })
+                .then(response => response.data)
 }
 
 export function updateData(data) {
