@@ -35,7 +35,7 @@
     "linkstate": "^1.1.1",
     "preact": "^8.5.2",
     "preact-compat": "^3.17.0",
-    "preact-material-components": "^1.6.0",
+    "preact-material-components": "https://github.com/fopina/preact-material-components/releases/download/1.5.7p1/preact-material-components-v1.5.7.tgz",
     "preact-render-to-string": "^4.1.0",
     "preact-router": "^2.5.5"
   }

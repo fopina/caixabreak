@@ -192,7 +192,7 @@ func extractData(client *http.Client, req *http.Request) (*DataInfo, error) {
 	}
 
 	if resp.Request.URL.String() != urlData {
-		return nil, fmt.Errorf("not logged in")
+		return nil, &UnauthorizedError{"not logged in"}
 	}
 
 	body, err := ioutil.ReadAll(resp.Body)
