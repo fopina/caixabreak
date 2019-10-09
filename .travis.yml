@@ -12,7 +12,7 @@ jobs:
       if: branch = master
       before_install:
       - |
-          git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qE '(break.yml$)|(^(break|cli))/' || {
+          git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qE '(.travis.yml$)|(break.yml$)|(^(break|cli))/' || {
             echo "Function was not updated, stopping build process."
             exit
           }
@@ -34,7 +34,7 @@ jobs:
         - "stable"
       before_install:
       - |
-          git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qE '(^web)/' || {
+          git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qE '(.travis.yml$)|(^web)/' || {
             echo "Page was not updated, stopping build process."
             exit
           }
