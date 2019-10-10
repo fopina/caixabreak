@@ -2,6 +2,10 @@ import { Component } from 'preact';
 import List from 'preact-material-components/List';
 import Fab from 'preact-material-components/Fab';
 import LinearProgress from 'preact-material-components/LinearProgress';
+import Card from 'preact-material-components/Card';
+import Icon from 'preact-material-components/Icon';
+import 'preact-material-components/Card/style.css';
+import 'preact-material-components/Icon/style.css';
 import 'preact-material-components/List/style.css';
 import 'preact-material-components/Fab/style.css';
 import 'preact-material-components/LinearProgress/style.css';
@@ -57,6 +61,17 @@ export default class Home extends Component {
 		} else {
 			return (<div class={`${style.home} page`}>
 				<h1></h1>
+				<div>
+						<Card>
+							<div class={style.cardHeader}>
+							<div class="mdc-typography--title">Balance</div>
+								<h2 class="mdc-typography--caption">
+									<Icon>euro_symbol</Icon>
+									{getData().Balance}
+								</h2>
+							</div>
+						</Card>
+					</div>
 				<div>
 					<List two-line={true}>
 					{ getData().History.map(item => 
