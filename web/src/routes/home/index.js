@@ -58,8 +58,10 @@ export default class Home extends Component {
 					<LinearProgress indeterminate />
 				</div>
 			)
-		} else {
-			return (<div class={`${style.home} page`}>
+		}
+
+		return (
+			<div class={`${style.home} page`}>
 				<h1></h1>
 				<div>
 						<Card>
@@ -98,6 +100,5 @@ export default class Home extends Component {
 				<Fab ripple class={style.fab} onClick={this.refresh}><Fab.Icon>refresh</Fab.Icon></Fab>
 			</div>
 		)
-		}
 	}
 }
