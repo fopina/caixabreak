@@ -278,7 +278,7 @@ func GetDataForMonth(tokenString, viewState, cardNumber, monthYear string) (*Dat
 	form := url.Values{
 		"consultaMovimentosCartoesPrePagos":                  {"consultaMovimentosCartoesPrePagos"},
 		"consultaMovimentosCartoesPrePagos:ignoreFieldsComp": {""},
-		"consultaMovimentosCartoesPrePagos:selectedCard":     {"10111134853"},
+		"consultaMovimentosCartoesPrePagos:selectedCard":     {cardNumber},
 		"consultaMovimentosCartoesPrePagos:extractDates":     {monthYear},
 		"javax.faces.ViewState":                              {viewState},
 	}
