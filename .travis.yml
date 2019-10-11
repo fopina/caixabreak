@@ -45,6 +45,7 @@ jobs:
         - cd web
         - npm install
         - echo PREACT_APP_API_URL=${FAAS_GATEWAY}function/break > .env
+        - echo PREACT_APP_VERSION=$(date +%Y%m%d)-${TRAVIS_BUILD_NUMBER} >> .env
         - npm run build
         - echo break.skmobi.com > build/CNAME
       deploy:
