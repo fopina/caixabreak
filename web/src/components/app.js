@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
 import { Router, route } from 'preact-router';
 
 import Header from './header';
@@ -6,7 +6,7 @@ import Home from '../routes/home';
 import About from '../routes/about';
 import Login from '../routes/login';
 import NotFound from '../routes/404';
-import { isLoggedIn, setServerEndpoint } from '../utils/BreakService';
+import { isLoggedIn } from '../utils/BreakService';
 
 export default class App extends Component {
 	handleRoute = e => {

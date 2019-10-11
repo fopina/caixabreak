@@ -38,6 +38,15 @@ export function isLoggedIn() {
     return getToken()
 }
 
+export function getLoggedUser() {
+    if (typeof window !== "undefined") {
+        if (getToken() != "") {
+            return localStorage.getItem("u")
+        }
+    }
+    return ""
+}
+
 export function refreshWithLogin(username, password) {
     return axios.post(SERVER_URL, {'username': username, 'password': password})
                 .then(response => response.data)
@@ -50,6 +59,13 @@ export function refreshWithSavedLogin() {
 export function refreshWithToken() {
     return axios.post(SERVER_URL, { 'token': getToken() })
                 .then(response => response.data)
+}
+
+export function logout() {
+    axios.post(SERVER_URL, { 'token': getToken(), 'logout': true})
+    // clean everything despite token invalidation worked
+    setToken(null)
+    removeLogin()
 }
 
 export function updateData(data) {
