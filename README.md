@@ -1,3 +1,7 @@
+# DISCONTINUED
+
+CGD now allows meal-card-only users to check balance and history in their main app [CaixaDirecta](https://apps.apple.com/pt/app/caixadirecta/id1369089471), so this webapp no longer makes sense.
+
 # caixabreak
 CaixaBreak Mobile Webapp
 
